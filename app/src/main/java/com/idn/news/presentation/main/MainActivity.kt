@@ -26,6 +26,8 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class MainActivity : BaseActivity<ActivityMainBinding>(), SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var layoutManager: LinearLayoutManager
+    private lateinit var searchView: SearchView
+
     private val viewModel: NewsViewModel by viewModel()
     private val mainPagingAdaper: MainAdapter by lazy { MainAdapter() }
     private var textQuery: String? = null
@@ -44,16 +46,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), SwipeRefreshLayout.OnR
     }
 
     override fun onRefresh() {
+        searchView.isIconified = true
+        searchView.onActionViewCollapsed()
         textQuery = null
-        getAllNews()
         bind.srNews.isRefreshing = false
+
+        getAllNews()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
 
         val itemSearch = menu?.findItem(R.id.nav_search)
-        val searchView = itemSearch?.actionView as SearchView
+        searchView = itemSearch?.actionView as SearchView
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
