@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">News</string>
+
+    <string name="img_description">My Image</string>
+    <string name="title_please_wait">Silahkan tunggu</string>
+    <string name="please_wait">Sedang memproses data…</string>
+
+    <string name="try_again">Coba lagi</string>
+    <string name="loading_error">Terjadi kesalahan. Silahkan coba lagi</string>
+
+    <string name="error_default">Silahkan coba lagi</string>
+    <string name="error_not_found">Data tidak ditemukan</string>
+    <string name="search">Pencarian Berita</string>
+</resources>

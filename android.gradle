@@ -1,0 +1,32 @@
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            buildConfigField "Boolean", "DEBUG_MODE", "true"
+            buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:3000/\"")
+            buildConfigField("String", "BASE_URL_FILES", "\"https://bitungkota.go.id/uploads/berita/\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}

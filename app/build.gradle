@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
+}
+
+apply from: '../android.gradle'
+apply from: '../dependencies.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.idn.news"
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation project(":core")
+}

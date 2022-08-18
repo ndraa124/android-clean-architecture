@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+apply from: '../android.gradle'
+apply from: '../dependencies.gradle'
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+}
+
+dependencies {
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingVersion"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineCoreVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineAndroidVersion"
+
+    // Inspection of HTTP(S) requests/responses
+    debugImplementation "com.github.chuckerteam.chucker:library:$chuckerVersion"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:$chuckerVersion"
+
+    // ViewModel
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$liveDataVersion"
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.idn.news.BuildConfig" />
+
+        <import type="com.idn.news.external.Utils" />
+
+        <variable
+            name="data"
+            type="com.idn.core.data.source.remote.model.news.NewsModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:layout_marginVertical="@dimen/margin_bottom_between_edit_text">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            loadImage='@{BuildConfig.BASE_URL_FILES + data.img}'
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/img_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gl_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_divider"
+            app:layout_constraintTop_toTopOf="@+id/iv_cover">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunito_bold"
+                android:maxLines="2"
+                android:text='@{data.title}'
+                android:textAlignment="textStart"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/font_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem/random" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_between_text"
+                android:fontFamily="@font/nunito_bold"
+                android:text='@{Utils.INSTANCE.getDateFormat(data.date, 2) + " \u2022 " + Utils.INSTANCE.getDateFormat(data.date, 4)}'
+                android:textAlignment="textStart"
+                android:textColor="@color/colorTextDisable"
+                android:textSize="@dimen/font_extra_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:text="@tools:sample/date/ddmmyy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

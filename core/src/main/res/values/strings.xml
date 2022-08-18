@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Error -->
+    <string name="error">Ooops, There\'s Something Wrong!!!</string>
+    <string name="error_delete_cart">Item keranjang gagal dihapus</string>
+    <string name="error_no_connection">Tidak ada koneksi internet!</string>
+    <string name="error_wrong_password">Periksa kembali username dan password anda!</string>
+    <string name="error_registered">Registrasi gagal! Silahkan coba lagi!</string>
+    <string name="error_username_is_unique">Username telah terdaftar!</string>
+    <string name="error_jwt_expired">Waktu login anda sudah kadaluarsa. Silahkan login kembali!</string>
+    <string name="error_internal_server">Terjadi kesalahan teknis. Silahkan coba beberapa saat lagi.</string>
+    <string name="error_stock_is_empty">Stok kosong</string>
+    <string name="error_address_is_null">Alamat anda masih kosong.\nSilahkan tambah alamat terlebih dahulu.</string>
+    <string name="error_data_empty">Data tidak ditemukan</string>
+    <string name="error_empty">Tidak ada data</string>
+    <string name="error_empty_product">Produk tidak ditemukan</string>
+    <string name="error_empty_cart">Keranjang anda kosong. \nSilahkan pilih produk terlebih dahulu</string>
+    <string name="error_empty_address">Alamat pengiriman anda kosong. \nSilahkan tambah alamat terlebih dahulu</string>
+    <string name="error_empty_bank">Tidak ada rekening bank.\nSilahkan hubungi operator</string>
+    <string name="error_delete_address">Alamat gagal dihapus. Silahkan coba lagi</string>
+    <string name="error_save_address">Alamat gagal disimpan. Silahkan coba lagi</string>
+</resources>

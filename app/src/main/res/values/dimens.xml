@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Radius -->
+    <dimen name="radius_default">8dp</dimen>
+    <dimen name="radius_medium">12dp</dimen>
+    <dimen name="radius_large">16dp</dimen>
+    <dimen name="radius_xl">32dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_default">14dp</dimen>
+    <dimen name="padding_horizontal">16dp</dimen>
+    <dimen name="padding_horizontal_full">24dp</dimen>
+    <dimen name="padding_vertical">16dp</dimen>
+    <dimen name="padding_text">4dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_zero">0.0dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_horizontal">16dp</dimen>
+    <dimen name="margin_horizontal_text">4dp</dimen>
+    <dimen name="margin_horizontal_small">2dp</dimen>
+    <dimen name="margin_vertical">16dp</dimen>
+    <dimen name="margin_top_parent">24dp</dimen>
+    <dimen name="margin_top_parent_xl">72dp</dimen>
+    <dimen name="margin_top_between_top">64dp</dimen>
+    <dimen name="margin_top_between_logo">32dp</dimen>
+    <dimen name="margin_top_between_text">4dp</dimen>
+    <dimen name="margin_top_between_edit_text">14dp</dimen>
+    <dimen name="margin_top_minus">-24dp</dimen>
+    <dimen name="margin_bottom_parent">24dp</dimen>
+    <dimen name="margin_bottom_between_text">4dp</dimen>
+    <dimen name="margin_bottom_between_edit_text">8dp</dimen>
+    <dimen name="margin_bottom_between_cart">-10dp</dimen>
+    <dimen name="margin_start_parent">16dp</dimen>
+    <dimen name="margin_start_between_text">4dp</dimen>
+    <dimen name="margin_end_parent">16dp</dimen>
+    <dimen name="margin_end_between_text">4dp</dimen>
+    <dimen name="margin_end_between_edit_text">8dp</dimen>
+
+    <!-- Corner -->
+    <dimen name="corner_default">4dp</dimen>
+    <dimen name="corner_secondary">8dp</dimen>
+    <dimen name="corner_variant">16dp</dimen>
+
+    <!-- Font -->
+    <dimen name="font_default_small">8sp</dimen>
+    <dimen name="font_default">14sp</dimen>
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_extra_small">12sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_medium_2">20sp</dimen>
+    <dimen name="font_extra_medium">24sp</dimen>
+    <dimen name="font_large">28sp</dimen>
+    <dimen name="font_extra_large">32sp</dimen>
+
+    <!-- RecyclerView -->
+    <dimen name="bottom_end_sm">16dp</dimen>
+    <dimen name="bottom_end_default">24dp</dimen>
+    <dimen name="bottom_end_md">32dp</dimen>
+    <dimen name="bottom_end_lg">64dp</dimen>
+    <dimen name="bottom_end_xl">128dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_default">4dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="icon_default">24dp</dimen>
+</resources>
